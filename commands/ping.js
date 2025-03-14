@@ -17,7 +17,7 @@ module.exports = {
       const websocketPing = client.ws.ping;
 
       const embed = new EmbedBuilder()
-        .setColor(config.embedColor)
+        .setColor('#ff0000')
         .setAuthor({
           name: lang.ping.embed.title,
           iconURL: musicIcons.pingIcon,

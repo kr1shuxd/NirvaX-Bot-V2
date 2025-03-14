@@ -1,70 +1,89 @@
+/*
+
+  ________.__                        _____.___.___________
+ /  _____/|  | _____    ____  ____   \__  |   |\__    ___/
+/   \  ___|  | \__  \ _/ ___\/ __ \   /   |   |  |    |   
+\    \_\  \  |__/ __ \\  \__\  ___/   \____   |  |    |   
+ \______  /____(____  /\___  >___  >  / ______|  |____|   
+        \/          \/     \/    \/   \/                  
+
+╔════════════════════════════════════════════════════════════════════════╗
+║                                                                        ║
+║  ## Created by GlaceYT!                                                ║
+║  ## Feel free to utilize any portion of the code                       ║
+║  ## DISCORD :  https://discord.com/invite/xQF9f9yUEM                   ║
+║  ## YouTube : https://www.youtube.com/@GlaceYt                         ║
+║                                                                        ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+
+*/
+
 const { EmbedBuilder } = require('discord.js');
-const fs = require('fs');
-const path = require('path');
 const config = require("../config.js");
-const musicIcons = require('../UI/icons/musicicons.js');
 
 module.exports = {
   name: "help",
   description: "Get information about the bot",
   permissions: "0x0000000000000800",
   options: [],
-  run: async (client, interaction, lang) => {
+  run: async (client, interaction) => {
     try {
-      const botName = client.user.username;
+      const botName = client.user.username; 
 
-      const commandsPath = path.join(__dirname, "../commands");
-      const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
-      const totalCommands = commandFiles.length;
+      const helpDescription = `
+\`\`\`css
+Welcome to ${botName}!
 
-      const totalServers = client.guilds.cache.size;
-      const totalUsers = client.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0);
+Your ultimate music companion on Discord. Here are the available commands:
 
-      const uptime = process.uptime();
-      const days = Math.floor(uptime / (3600 * 24));
-      const hours = Math.floor((uptime % (3600 * 24)) / 3600);
-      const minutes = Math.floor((uptime % 3600) / 60);
-      const seconds = Math.floor(uptime % 60);
-      const uptimeString = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-      const ping = client.ws.ping;
+[ /play    ] - Start playing the songs.
+[ /pause   ] - Pause the current song.
+[ /resume  ] - Resume the current song.
+[ /lyrics  ] - Displays the lyrics of a song.
+[ /skip    ] - Skip the current song.
+[ /stop    ] - Destroys the music player.
+[ /np      ] - Shows now playing song.
+[ /volume  ] - Sets the volume of the player.
+[ /ping    ] - Check bot latency.
+[ /support ] - Shows support server info.
+[ /help    ] - Display this help menu.
+\`\`\`
+      `;
 
       const embed = new EmbedBuilder()
-        .setColor(config.embedColor || "#7289DA")
-        .setTitle(lang.help.embed.title.replace("{botName}", botName))
-        .setAuthor({
-          name: lang.help.embed.author,
-          iconURL: musicIcons.alertIcon,
-          url: config.SupportServer
-        })
-        .setThumbnail(client.user.displayAvatarURL({ dynamic: true }))
-        .setDescription(lang.help.embed.description
-          .replace("{botName}", botName)
-          .replace("{totalCommands}", totalCommands)
-          .replace("{totalServers}", totalServers)
-          .replace("{totalUsers}", totalUsers)
-          .replace("{uptimeString}", uptimeString)
-          .replace("{ping}", ping)
-        )
-        .addFields(
-          {
-            name: lang.help.embed.availableCommands,
-            value: commandFiles.map(file => {
-              const command = require(path.join(commandsPath, file));
-              return `\`/${command.name}\` - ${command.description || lang.help.embed.noDescription}`;
-            }).join('\n') || lang.help.embed.noCommands
-          }
-        )
-        .setFooter({ text: lang.footer, iconURL: musicIcons.heartIcon })
-        .setTimestamp();
+        .setColor('#ff0000')
+        .setTitle(`${botName} Help`)
+        .setThumbnail(client.user.displayAvatarURL()) 
+        .setDescription(helpDescription)
+        .setFooter({ text: `NirvaX Music v1.0`, iconURL: client.user.displayAvatarURL() }) 
+      
 
       return interaction.reply({ embeds: [embed] });
     } catch (e) {
       console.error(e);
-      return interaction.reply({
-        content: lang.help.embed.error,
-        ephemeral: true,
-      });
     }
   },
 };
+
+
+/*
+
+  ________.__                        _____.___.___________
+ /  _____/|  | _____    ____  ____   \__  |   |\__    ___/
+/   \  ___|  | \__  \ _/ ___\/ __ \   /   |   |  |    |   
+\    \_\  \  |__/ __ \\  \__\  ___/   \____   |  |    |   
+ \______  /____(____  /\___  >___  >  / ______|  |____|   
+        \/          \/     \/    \/   \/                  
+
+╔════════════════════════════════════════════════════════════════════════╗
+║                                                                        ║
+║  ## Created by GlaceYT!                                                ║
+║  ## Feel free to utilize any portion of the code                       ║
+║  ## DISCORD :  https://discord.com/invite/xQF9f9yUEM                   ║
+║  ## YouTube : https://www.youtube.com/@GlaceYt                         ║
+║                                                                        ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+
+*/

@@ -50,7 +50,6 @@ module.exports = {
     options: [
         {
             name: 'enable',
-            aliases: ["247", "24/7"],
             description: 'toggle autoplay on / off',
             type: ApplicationCommandOptionType.Boolean,
             required: true

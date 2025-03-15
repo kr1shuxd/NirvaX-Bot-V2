@@ -29,7 +29,7 @@ async function volume(client, interaction, lang) {
         player.setVolume(volume);
 
         const embed = new EmbedBuilder()
-            .setColor(config.embedColor)
+            .setColor('#ff0000')
             .setAuthor({ 
                 name: lang.volume.embed.volumeUpdated, 
                 iconURL: musicIcons.volumeIcon,

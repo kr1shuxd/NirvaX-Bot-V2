@@ -12,7 +12,7 @@ module.exports = {
   embedColor: "#1db954",
   activityName: "NirvaX | /help", // This is bot status Write Anything here 
   activityType: "LISTENING",  // Available activity types : LISTENING , PLAYING
-  SupportServer: "https://discord.gg/xQF9f9yUEM",
+  SupportServer: "https://dsc.gg/nirvax",
   embedTimeout: 5, 
   errorLog: "", 
   nodes: [

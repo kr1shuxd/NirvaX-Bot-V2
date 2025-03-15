@@ -3,7 +3,7 @@
 module.exports = {
   TOKEN: "",
   language: "en",
-  ownerID: ["1282344443109838903", 1035523468650872883"], 
+  ownerID: ["1282344443109838903, 1035523468650872883"], 
   mongodbUri : "",
   spotifyClientId : "",
   spotifyClientSecret : "",

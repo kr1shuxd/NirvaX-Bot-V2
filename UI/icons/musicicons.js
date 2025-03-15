@@ -11,9 +11,12 @@ const musicIcons = {
     stopIcon: 'https://cdn.discordapp.com/emojis/1021628438441902100.gif',
     volumeIcon: 'https://cdn.discordapp.com/emojis/1040824501711159397.gif',
     playlistIcon : 'https://cdn.discordapp.com/emojis/1096444591982522498.gif',
-    heartIcon : 'https://cdn.discordapp.com/emojis/900257798003240961.gif',
+    heartIcon : 'https://cdn.discordapp.com/emojis/1321437209878073394.webp?size=96&animated=true',
     pingIcon : 'https://cdn.discordapp.com/emojis/923089856752664576.gif',
-    CheckmarkIcon: "https://cdn.discordapp.com/emojis/819446784647757834.gif",
+    arrowIcon : 'https://cdn.discordapp.com/emojis/1308329266429034578.webp?size=96&animated=true',
+    devIcon : 'https://cdn.discordapp.com/emojis/1321439015303516181.webp?size=96&animated=true',
+    nirvaIcon : 'https://cdn.discordapp.com/emojis/1350165803080618197.webp?size=96',
+    CheckmarkIcon: "https://cdn.discordapp.com/attachments/1297117307860029450/1350375129208586280/1316383084576505916.png?ex=67d68257&is=67d530d7&hm=e51145b1ce69334934ca0b4ca9e36eeeb8f0becd85c8d8dbfe247a6fc84842b2&",
     MusicIcon:"https://cdn.discordapp.com/emojis/763415718271385610.gif",
 };
 

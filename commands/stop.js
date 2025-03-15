@@ -25,7 +25,7 @@ async function stop(client, interaction, lang) {
         player.destroy();
 
         const embed = new EmbedBuilder()
-            .setColor(config.embedColor)
+            .setColor('#ff0000')
             .setAuthor({ 
                 name: lang.stop.embed.musicHalted, 
                 iconURL: musicIcons.stopIcon,

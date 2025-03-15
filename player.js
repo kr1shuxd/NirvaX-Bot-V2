@@ -111,7 +111,7 @@ function initializePlayer(client) {
                 `- **Requester:** ${requester}\n` +
                 `- **Source:** ${track.info.sourceName}\n`)
             .setImage('attachment://musicard.png')
-            .setColor('#FF7A00');
+            .setColor('#ff0000');
 
             const actionRow1 = createActionRow1(false);
             const actionRow2 = createActionRow2(false);

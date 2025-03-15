@@ -8,7 +8,7 @@ async function queue(client, interaction, lang) {
 
         if (!player) {
             const embed = new EmbedBuilder()
-                .setColor(config.embedColor)
+                .setColor('#ff0000')
                 .setAuthor({
                     name: lang.queue.embed.queueEmpty,
                     iconURL: musicIcons.alertIcon,
@@ -26,7 +26,7 @@ async function queue(client, interaction, lang) {
 
         if (!currentTrack && queue.length === 0) {
             const embed = new EmbedBuilder()
-                .setColor(config.embedColor)
+                .setColor('#ff0000')
                 .setAuthor({
                     name: lang.queue.embed.queueEmpty,
                     iconURL: musicIcons.alertIcon,
@@ -62,7 +62,7 @@ async function queue(client, interaction, lang) {
         };
 
         const queueEmbed = new EmbedBuilder()
-            .setColor(config.embedColor)
+            .setColor('#ff0000')
             .setAuthor({
                 name: lang.queue.embed.currentQueue,
                 iconURL: musicIcons.beatsIcon,

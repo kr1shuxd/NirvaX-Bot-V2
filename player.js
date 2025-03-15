@@ -174,7 +174,18 @@ function initializePlayer(client) {
             console.error("Error handling autoplay:", error);
             await cleanupTrackMessages(client, player);
             player.destroy();
-            await channel.send("👾**Queue Empty! Disconnecting...**");
+             const embed = new EmbedBuilder()
+                .setColor(config.embedColor)
+                .setAuthor({
+                    name: lang.queue.embed.queueEmpty,
+                    iconURL: musicIcons.alertIcon,
+                    url: config.SupportServer
+                })
+                .setDescription(lang.queue.embed.queueEmptyDescription)
+                .setFooter({ text: lang.footer, iconURL: musicIcons.heartIcon });
+
+            await interaction.reply({ embeds: [embed], ephemeral: true });
+            return;
         }
     });
 }

@@ -24,7 +24,7 @@ async function skip(client, interaction, lang) {
         player.stop();
 
         const embed = new EmbedBuilder()
-            .setColor(config.embedColor)
+            .setColor('#ff0000')
             .setAuthor({ 
                 name: lang.skip.embed.songSkipped, 
                 iconURL: musicIcons.skipIcon,

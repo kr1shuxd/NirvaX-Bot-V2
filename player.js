@@ -109,7 +109,7 @@ function initializePlayer(client) {
                 `- **Author:** ${track.info.author || 'Unknown Artist'}\n` +
                 `- **Length:** ${formatDuration(track.info.length)}\n` +
                 `- **Requester:** ${requester}\n` +
-                `- **Source:** ${track.info.sourceName}\n` + '**- Controls :**\n 🔁 `Loop`, ❌ `Disable`, ⏭️ `Skip`, 📜 `Queue`, 🗑️ `Clear`\n ⏹️ `Stop`, ⏸️ `Pause`, ▶️ `Resume`, 🔊 `Vol +`, 🔉 `Vol -`')
+                `- **Source:** ${track.info.sourceName}\n`)
             .setImage('attachment://musicard.png')
             .setColor('#FF7A00');
 
@@ -255,7 +255,7 @@ function setupCollector(client, player, channel, message) {
 
         if (!voiceChannel || voiceChannel.id !== playerChannel) {
             const vcEmbed = new EmbedBuilder()
-                .setColor(config.embedColor)
+                .setColor('#ff0000')
                 .setDescription('🔒 **You need to be in the same voice channel to use the controls!**');
             const sentMessage = await channel.send({ embeds: [vcEmbed] });
             setTimeout(() => sentMessage.delete().catch(console.error), config.embedTimeout * 1000);

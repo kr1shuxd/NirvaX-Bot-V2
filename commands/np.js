@@ -36,7 +36,7 @@ async function nowPlaying(client, interaction, lang) {
         const progressBar = createProgressBar(player.position / 1000, player.current.info.length / 1000);
 
         const npEmbed = new EmbedBuilder()
-            .setColor(config.embedColor)
+            .setColor('#ff0000')
             .setAuthor({ 
                 name: lang.nowPlaying.embed.nowPlaying, 
                 iconURL: musicIcons.beats2Icon,

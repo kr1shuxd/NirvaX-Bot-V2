@@ -174,7 +174,7 @@ function initializePlayer(client) {
             console.error("Error handling autoplay:", error);
             await cleanupTrackMessages(client, player);
             player.destroy();
-            await channel.send("⚠️ **Queue Ended**\n All songs have been played! **/play** more songs to keep the party going!\n\n Did you know ? You can enhance your music experience! & Unlock even more cool features & support us by purchasing our **premium*. Happy listening!");
+            await channel.send("⚠️ **Queue Ended**\nAll songs have been played! **/play** more songs to keep the party going!\n\nDid you know ? You can enhance your music experience! & Unlock even more cool features & support us by purchasing our **premium**. Happy listening!");
         }
     });
 }

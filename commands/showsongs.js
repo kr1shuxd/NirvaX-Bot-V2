@@ -66,7 +66,7 @@ async function showSongs(client, interaction, lang) {
                 .join('\n');
 
             const embed = new EmbedBuilder()
-                .setColor('#00ff00')
+                .setColor('#ff0000')
                 .setAuthor({ 
                     name: lang.showsongs.embed.songsInPlaylistPage.replace("{playlistName}", playlistName).replace("{currentPage}", index + 1).replace("{totalPages}", songChunks.length), 
                     iconURL: musicIcons.playlistIcon,

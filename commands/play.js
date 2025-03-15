@@ -127,7 +127,7 @@ async function play(client, interaction, lang) {
                 requesters.set(track.info.uri, interaction.user.username);
             } else {
                 const errorEmbed = new EmbedBuilder()
-                .setColor(config.embedColor)
+                .setColor('#ff0000')
                 .setAuthor({ 
                     name: lang.play.embed.error,
                     iconURL: musicIcons.alertIcon,
@@ -157,7 +157,7 @@ async function play(client, interaction, lang) {
         if (!player.playing && !player.paused) player.play();
 
         const randomEmbed = new EmbedBuilder()
-        .setColor(config.embedColor)
+        .setColor('#ff0000')
         .setAuthor({
             name: lang.play.embed.requestUpdated,
             iconURL: musicIcons.beats2Icon,

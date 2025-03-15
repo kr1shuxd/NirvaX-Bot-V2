@@ -24,7 +24,7 @@ async function pause(client, interaction, lang) {
         player.pause(true);
 
         const embed = new EmbedBuilder()
-            .setColor(config.embedColor)
+            .setColor('#ff0000')
             .setAuthor({ 
                 name: lang.pause.embed.paused, 
                 iconURL: musicIcons.pauseresumeIcon,

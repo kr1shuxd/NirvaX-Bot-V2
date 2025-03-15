@@ -15,7 +15,7 @@ module.exports = {
             const youtubeLink = "https://www.youtube.com/@GlaceYT";
 
             const embed = new EmbedBuilder()
-                .setColor('#b300ff')
+                .setColor('#ff0000')
                 .setAuthor({
                     name: lang.support.embed.authorName,
                     iconURL: musicIcons.beats2Icon, 
@@ -27,7 +27,7 @@ module.exports = {
                     .replace("{replitLink}", replitLink)
                     .replace("{youtubeLink}", youtubeLink)
                 )
-                .setImage('https://cdn.discordapp.com/attachments/1350154738884415629/1350164596513570856/standard.gif?ex=67d5be44&is=67d46cc4&hm=0f9769944f07069a2f35d13fc1f93aa316c023cd2ec7781be85c80762983970c&')
+                .setImage('https://cdn.discordapp.com/attachments/1350357128409382912/1350367198983487559/Picsart_24-10-27_23-25-23-883.jpg?ex=67d67af4&is=67d52974&hm=22dd786e8eb57c5746596de134a8811db32a78e06c071ac8020507004b06d780&')
                 .setTimestamp();
 
             await interaction.reply({ embeds: [embed] });

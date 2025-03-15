@@ -319,7 +319,7 @@ async function handleInteraction(i, player, channel) {
 }
 
 async function sendEmbed(channel, message) {
-    const embed = new EmbedBuilder().setColor(#ff0000).setDescription(message);
+    const embed = new EmbedBuilder().setColor('#ff0000').setDescription(message);
     const sentMessage = await channel.send({ embeds: [embed] });
     setTimeout(() => sentMessage.delete().catch(console.error), config.embedTimeout * 1000);
 }

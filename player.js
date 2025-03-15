@@ -411,7 +411,7 @@ async function showLyrics(channel, player) {
     const embed = new EmbedBuilder()
         .setTitle(`🎵 Live Lyrics: ${track.title}`)
         .setDescription("🔄 Syncing lyrics...")
-        .setColor(#ff0000);
+        .setColor('#ff0000');
 
     const stopButton = new ButtonBuilder()
         .setCustomId("stopLyrics")

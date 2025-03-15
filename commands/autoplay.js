@@ -51,17 +51,10 @@ module.exports = {
         {
             name: 'enable',
             aliases: ["247", "24/7"],
-            description: 'Toggle autoplay on/off',
+            description: 'toggle autoplay on / off',
             type: ApplicationCommandOptionType.Boolean,
             required: true
         }
     ],
-    run: async (client, interaction, lang) => {
-        const descriptionEmbed = new EmbedBuilder()
-            .setColor('#ff0000')
-            .setDescription('Toggle autoplay for the server');
-
-        await interaction.reply({ embeds: [descriptionEmbed], ephemeral: true });
-        await toggleAutoplay(client, interaction, lang);
-    }
+    run: toggleAutoplay
 };

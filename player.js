@@ -174,18 +174,10 @@ function initializePlayer(client) {
             console.error("Error handling autoplay:", error);
             await cleanupTrackMessages(client, player);
             player.destroy();
-             const embed = new EmbedBuilder()
-                .setColor(config.embedColor)
-                .setAuthor({
-                    name: lang.queue.embed.queueEmpty,
-                    iconURL: musicIcons.alertIcon,
-                    url: config.SupportServer
-                })
-                .setDescription(lang.queue.embed.queueEmptyDescription)
-                .setFooter({ text: lang.footer, iconURL: musicIcons.heartIcon });
-
-            await interaction.reply({ embeds: [embed], ephemeral: true });
-            return;
+            const errorEmbed = new EmbedBuilder()
+                .setColor('#FF0000')
+                .setDescription("⚠️ **Queue Ended**\n All songs have been played! **/play** more songs to keep the party going!\n\n Did you know ? You can enhance your music experience! & Unlock even more cool features & support us by purchasing our **premium*. Happy listening!);
+            await channel.send({ embeds: [errorEmbed] });
         }
     });
 }
